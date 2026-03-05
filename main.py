@@ -42,4 +42,30 @@ def modify_guest(): #Allows the user to change an existing guest's name.
         print("Guest list is empty.")
         return
 
-   
+   name = get_valid_name("Enter guest name to remove: ")
+
+    # Check if the guest exists
+    if name in guests:
+        index = guests.index(name)
+        guests.pop(index)
+        # pop(index) removes the item at that position
+        print(" Guest removed.")
+    else:
+        print(" Guest not found.")
+
+
+def sort_guests():
+    """
+    Sorts the guest list alphabetically.
+    This makes invitations easier to read.
+    """
+    guests.sort()
+    print(" Guests sorted alphabetically.")
+
+
+def show_count():
+    """
+    Displays how many guests are currently invited.
+    len(list) counts the number of items in the list.
+    """
+    print(f" Total guests: {len(guests)}")
