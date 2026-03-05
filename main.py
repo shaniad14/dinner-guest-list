@@ -86,3 +86,16 @@ def show_invitations():
 def main():
   
     print("\nWelcome to the Reception Guest Manager!")
+
+
+     while True:
+        # Display menu options
+        print("\n1 - Add Guest")
+        print("2 - Modify Guest")
+        print("3 - Remove Guest")
+        print("4 - Sort Guests")
+        print("5 - Show Number of Guests")
+        print("6 - Show Invitations")
+        print("0 - Exit")
+
+
