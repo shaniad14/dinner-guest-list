@@ -110,4 +110,13 @@ def main():
             remove_guest()
         elif choice == "4":
             sort_guests()
+           elif choice == "5":
+            show_count()
+        elif choice == "6":
+            show_invitations()
+        elif choice == "0":
+            print("Goodbye!")
+            break
+        
+
 
