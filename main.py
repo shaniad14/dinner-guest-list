@@ -117,6 +117,9 @@ def main():
         elif choice == "0":
             print("Goodbye!")
             break
-        
+         else:
+            print(" That is not one of the options.")
+
+
 
 
