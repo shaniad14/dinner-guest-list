@@ -97,5 +97,17 @@ def main():
         print("5 - Show Number of Guests")
         print("6 - Show Invitations")
         print("0 - Exit")
+        
 
+        choice = input("Choose an option: ").strip()
+
+        # Run the correct function based on user choice
+        if choice == "1":
+            add_guest()
+        elif choice == "2":
+            modify_guest()
+        elif choice == "3":
+            remove_guest()
+        elif choice == "4":
+            sort_guests()
 
