@@ -54,18 +54,25 @@ def modify_guest(): #Allows the user to change an existing guest's name.
         print(" Guest not found.")
 
 
-def sort_guests():
-    """
-    Sorts the guest list alphabetically.
-    This makes invitations easier to read.
-    """
+def sort_guests(): #Sorts the guest list alphabetically.
+   
     guests.sort()
     print(" Guests sorted alphabetically.")
 
 
-def show_count():
-    """
-    Displays how many guests are currently invited.
-    len(list) counts the number of items in the list.
-    """
+def show_count(): #Displays how many guests are currently invited and  len counts the number of items in the list.
+    
+
     print(f" Total guests: {len(guests)}")
+
+def show_invitations():
+    """
+    Prints a personalized invitation for each guest.
+    Uses a loop to go through the list one name at a time.
+    """
+    if not guests:
+        print(" No guests to invite.")
+        return
+
+    print("\nDinner Invitations")
+    print("-" * 35)
