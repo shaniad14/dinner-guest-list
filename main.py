@@ -76,3 +76,13 @@ def show_invitations():
 
     print("\nDinner Invitations")
     print("-" * 35)
+
+     # Loop through every guest in the list
+    for guest in guests:
+        print(f"Dear {guest}, you are invited to the dinner reception!")
+
+    print("-" * 35)
+
+def main():
+  
+    print("\nWelcome to the Reception Guest Manager!")
