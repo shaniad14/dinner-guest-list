@@ -121,5 +121,6 @@ def main():
             print(" That is not one of the options.")
 
 
-
+if __name__ == "__main__":
+    main()
 
