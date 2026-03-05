@@ -1,6 +1,6 @@
 """
 Reception Guest Manager
-Keeps track of dinner guests and generates invitations.
+keeps track of dinner guests and generates invitations.
 """
 
 # Data
