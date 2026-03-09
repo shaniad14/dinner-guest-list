@@ -4,13 +4,17 @@ keeps track of dinner guests and generates invitations.
 """
 
 # Data
-guests = [] # Stores the names of all invited dinner guests
+guests = []  # Stores the names of all invited dinner guests
 
-def format_name(name: str) -> str:  # This function cleans up the user's input and removes extra spaces
+
+def format_name(
+    name: str,
+) -> str:  # This function cleans up the user's input and removes extra spaces
     return name.strip().title()
 
-def get_valid_name(prompt: str) -> str: #This function gets a name from the user.
-   
+
+def get_valid_name(prompt: str) -> str:  # This function gets a name from the user.
+
     while True:
         name = input(prompt).strip()
 
@@ -18,13 +22,14 @@ def get_valid_name(prompt: str) -> str: #This function gets a name from the user
         if name == "":
             print("Name cannot be empty.")
         else:
-        return format_name(name)  
+            return format_name(name)
 
         # Return the cleaned and formatted name
         return format_name(name)
 
-def add_guest(): #Prevents duplicate names
-    
+
+def add_guest():  # Prevents duplicate names
+
     name = get_valid_name("Enter guest name: ")
 
     if name in guests:
@@ -36,13 +41,13 @@ def add_guest(): #Prevents duplicate names
     print(f"{name} added.")
 
 
-def modify_guest(): #Allows the user to change an existing guest's name.
-    
+def modify_guest():  # Allows the user to change an existing guest's name.
+
     if not guests:
         print("Guest list is empty.")
         return
 
-   name = get_valid_name("Enter guest name to remove: ")
+    name = get_valid_name("Enter guest name to remove: ")
 
     # Check if the guest exists
     if name in guests:
@@ -54,16 +59,16 @@ def modify_guest(): #Allows the user to change an existing guest's name.
         print(" Guest not found.")
 
 
-def sort_guests(): #Sorts the guest list alphabetically.
-   
+def sort_guests():  # Sorts the guest list alphabetically.
+
     guests.sort()
     print(" Guests sorted alphabetically.")
 
 
-def show_count(): #Displays how many guests are currently invited and  len counts the number of items in the list.
-    
+def show_count():  # Displays how many guests are currently invited and  len counts the number of items in the list.
 
     print(f" Total guests: {len(guests)}")
+
 
 def show_invitations():
     """
@@ -77,18 +82,18 @@ def show_invitations():
     print("\nDinner Invitations")
     print("-" * 35)
 
-     # Loop through every guest in the list
+    # Loop through every guest in the list
     for guest in guests:
         print(f"Dear {guest}, you are invited to the dinner reception!")
 
     print("-" * 35)
 
+
 def main():
-  
+
     print("\nWelcome to the Reception Guest Manager!")
 
-
-     while True:
+    while True:
         # Display menu options
         print("\n1 - Add Guest")
         print("2 - Modify Guest")
@@ -97,7 +102,6 @@ def main():
         print("5 - Show Number of Guests")
         print("6 - Show Invitations")
         print("0 - Exit")
-        
 
         choice = input("Choose an option: ").strip()
 
@@ -110,17 +114,16 @@ def main():
             remove_guest()
         elif choice == "4":
             sort_guests()
-           elif choice == "5":
+        elif choice == "5":
             show_count()
         elif choice == "6":
             show_invitations()
         elif choice == "0":
             print("Goodbye!")
             break
-         else:
+        else:
             print(" That is not one of the options.")
 
 
 if __name__ == "__main__":
     main()
-
